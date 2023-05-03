@@ -1,19 +1,15 @@
 package org.example.bankomat;
 
-import org.example.bankomat.service.AccountService;
-
 import java.util.ArrayList;
 import java.util.List;
 
-public class preparedData {
-    private AccountService accountService;
+public class PreparedData {
+//    private AccountService accountService;
 
-    public preparedData() {
-
-
+    public PreparedData() {
     }
 
-    public List<BankAccount> prepareListOfAccount() {
+    public List<BankAccount> preparedListOfAccount() {
         List<BankAccount> list = new ArrayList<>();
         BankAccount bankAccount1 = new BankAccount(123456, 2345, 1450);
         BankAccount bankAccount2 = new BankAccount(654321, 1234, 1500);
@@ -24,6 +20,7 @@ public class preparedData {
         list.add(bankAccount2);
         list.add(bankAccount3);
         list.add(bankAccount4);
+
         return list;
     }
 
