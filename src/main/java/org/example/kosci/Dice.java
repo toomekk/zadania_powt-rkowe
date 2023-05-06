@@ -9,7 +9,6 @@ public class Dice {
 
     public Dice(int sides) {
         this.sides = sides;
-//        throwDice();
     }
 
     public void setValue(int value) {
