@@ -109,13 +109,13 @@ public class Package {
 
     @Override
     public String toString() {
+        String formattedPrice = String.format("%.2f", price);
         return "Package{" +
-                "NAME_LIST=" + NAME_LIST +
                 ", sender='" + sender + '\'' +
                 ", recipient='" + recipient + '\'' +
                 ", weight=" + weight +
                 ", priority=" + priority +
-                ", price=" + price +
+                ", price=" + formattedPrice +
                 '}';
     }
 }
