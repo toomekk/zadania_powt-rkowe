@@ -1,5 +1,7 @@
 package org.example.kosci;
 
+import java.util.HashMap;
+import java.util.Map;
 import java.util.Scanner;
 
 public class DiceMain {
@@ -93,7 +95,12 @@ public class DiceMain {
         System.out.printf("\nZapisane punkty %s, %d ", player1.getName(), player1.getSavedSum());
         System.out.printf("\nBieżace punkty %s, %d ", player2.getName(), player2.getCurrentSum());
         System.out.printf("\nZapisane punkty %s, %d ", player2.getName(), player2.getSavedSum());
-
+//        Map<String, Integer> mapOfActualResults = new HashMap<>();
+//        mapOfActualResults.put("Bieżące punkty" + player1.getName(),player1.getCurrentSum());
+//        mapOfActualResults.put("Zapisane punkty" + player1.getName(),player1.getSavedSum());
+//        mapOfActualResults.put("Bieżące punkty" + player2.getName(),player2.getCurrentSum());
+//        mapOfActualResults.put("Zapisane punkty" + player2.getName(),player2.getSavedSum());
+//        System.out.println(mapOfActualResults);
     }
 
 }
