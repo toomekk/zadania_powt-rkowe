@@ -12,6 +12,7 @@ public class Package {
     private int weight;
     private boolean priority;
     private double price;
+    private String status;
 
     public Package(String sender, String recipient, int weight) {
         if (sender.isEmpty() || recipient.isBlank()) {
@@ -27,6 +28,7 @@ public class Package {
         }
         this.weight = weight;
         this.priority = false;
+        this.status = "utworzona";
         this.price = this.checkPrice();
 
     }
@@ -38,6 +40,7 @@ public class Package {
         this.weight = random.nextInt(1, 10000);
         this.priority = random.nextBoolean();
         this.price = this.checkPrice();
+        this.status = "utworzona";
     }
 
     public double checkPrice() {
@@ -107,6 +110,14 @@ public class Package {
         this.price = price;
     }
 
+    public String getStatus() {
+        return status;
+    }
+
+    public void setStatus(String status) {
+        this.status = status;
+    }
+
     @Override
     public String toString() {
         String formattedPrice = String.format("%.2f", price);
@@ -116,6 +127,7 @@ public class Package {
                 ", weight=" + weight +
                 ", priority=" + priority +
                 ", price=" + formattedPrice +
+                ", status=" + status +
                 '}';
     }
 }

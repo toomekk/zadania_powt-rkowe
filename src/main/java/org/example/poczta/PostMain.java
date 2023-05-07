@@ -2,7 +2,7 @@ package org.example.poczta;
 
 public class PostMain {
     public static void main(String[] args) {
-//        final Package package1 = new Package("a", " h", 4190);
+        final Package package1 = new Package("a", " h", 4190);
 //        final Package package2 = new Package();
 //        Package package3 = null;
 //        System.out.println(package1.getPrice());
@@ -26,7 +26,15 @@ public class PostMain {
             System.out.println(p);
             totalCost = totalCost + p.getPrice();
         }
-        System.out.println("Koszt wysłania wszystkich paczek to: " + totalCost);
+        System.out.println("Koszt wysłania wszystkich paczek to: " + String.format("%.2f",totalCost));
+
+        Post post = new Post();
+        post.sendThePackage(package1,15);
+
+        Package newPack = post.createPack();
+        post.sendThePackage(newPack,15);
+
+        System.out.println(post.lastSendPack());
 
     }
 }
