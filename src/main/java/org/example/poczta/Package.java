@@ -14,7 +14,9 @@ public class Package {
     private double price;
     private String status;
 
+
     public Package(String sender, String recipient, int weight) {
+
         if (sender.isEmpty() || recipient.isBlank()) {
             throw new IllegalArgumentException("Podaj adresata lub nadwcę");
         }

@@ -36,5 +36,27 @@ public class PostMain {
 
         System.out.println(post.lastSendPack());
 
+        Letter letter = new Letter(new Address("Bakaliowa","66", "66-666"),new
+    Address("Cytrynowa","11","11-111"));
+
+        post.sendTheLetter(letter,10);
+        post.sendTheLetter(letter,10);
+        post.sendTheLetter(letter,10);
+        post.sendTheLetter(letter,10);
+        post.sendTheLetter(letter,10);
+        post.sendTheLetter(letter,10);
+        post.sendTheLetter(letter,10);
+        post.sendTheLetter(letter,10);
+        post.sendTheLetter(letter,10);
+        post.sendTheLetter(letter,10);
+        post.sendTheLetter(letter,10);
+        post.sendThePostman();
+        post.sendTheLetter(letter,10);
+
+
+
+
+
+
     }
 }
