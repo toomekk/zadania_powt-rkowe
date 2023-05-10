@@ -1,13 +1,15 @@
 package org.example.kwiaciarnia;
 
 import java.util.Collection;
+import java.util.HashMap;
 import java.util.Map;
 import java.util.Set;
 
-public class PriceList implements Map<String, Double>{
-
+public class PriceList {
+private Map<String, Double> mapPriceList;
     private static PriceList instance;
     private PriceList() {
+        mapPriceList = new HashMap<>();
     }
 
     public static PriceList getInstance() {
@@ -17,63 +19,22 @@ public class PriceList implements Map<String, Double>{
         return instance;
     }
 
-    @Override
-    public int size() {
-        return 0;
+
+    public void put(String flower, Double price) {
+        mapPriceList.put(flower, price);
+    }
+
+    public Double getPrice(String flower) {
+        return mapPriceList.get(flower);
+    }
+    public boolean containsKey(String item) {
+        return mapPriceList.containsKey(item);
     }
 
     @Override
-    public boolean isEmpty() {
-        return false;
-    }
-
-    @Override
-    public boolean containsKey(Object key) {
-        return false;
-    }
-
-    @Override
-    public boolean containsValue(Object value) {
-        return false;
-    }
-
-    @Override
-    public Double get(Object key) {
-        return null;
-    }
-
-    @Override
-    public Double put(String key, Double value) {
-        return null;
-    }
-
-    @Override
-    public Double remove(Object key) {
-        return null;
-    }
-
-    @Override
-    public void putAll(Map<? extends String, ? extends Double> m) {
-
-    }
-
-    @Override
-    public void clear() {
-
-    }
-
-    @Override
-    public Set<String> keySet() {
-        return null;
-    }
-
-    @Override
-    public Collection<Double> values() {
-        return null;
-    }
-
-    @Override
-    public Set<Entry<String, Double>> entrySet() {
-        return null;
+    public String toString() {
+        return "PriceList{" +
+                "mapPriceList=" + mapPriceList +
+                '}';
     }
 }

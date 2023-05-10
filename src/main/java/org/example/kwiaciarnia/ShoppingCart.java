@@ -1,8 +1,5 @@
 package org.example.kwiaciarnia;
 
-import org.example.kwiaciarnia.flowers.Flower;
-
-import java.util.List;
 
 public class ShoppingCart {
     Customer customer;
@@ -13,7 +10,11 @@ public class ShoppingCart {
 
     @Override
     public String toString() {
-        return "Przed płaceniem Wózek właściciel Janek\n" +
-                customer.customerFlowers;
+//        if (!customer.getShoppingCart().equals(customer.deleteFlower(customer.getCustomerFlowers()))) {
+//            return " Wózek własciciel " + customer.getName() + " -- pusto\n";
+//        } else {
+            return "Wózek właściciel \n" + customer.getName() +
+                    customer.customerFlowers;
+//        }
     }
 }

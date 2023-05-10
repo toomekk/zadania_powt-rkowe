@@ -6,11 +6,13 @@ public abstract class Flower {
 
     private String name;
     private String color;
+    private int amount;
 
 
-    public Flower(String name, String color) {
+    public Flower(String name, String color, int amount) {
         this.name = name;
         this.color = color;
+        this.amount = amount;
     }
 
     public String getName() {
@@ -27,5 +29,13 @@ public abstract class Flower {
 
     public void setColor(String color) {
         this.color = color;
+    }
+
+    public int getAmount() {
+        return amount;
+    }
+
+    public void setAmount(int amount) {
+        this.amount = amount;
     }
 }

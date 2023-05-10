@@ -7,17 +7,18 @@ public class Freesia extends Flower {
     PriceList priceList;
 
     public Freesia(int amount) {
-        super("frezja", "żółty");
+        super("frezja", "żółty",amount);
         this.amount = amount;
     }
 
     @Override
     public String toString() {
+        PriceList pl = PriceList.getInstance();
         return
                 super.getName() +
                         " kolor: " + super.getColor() +
-                        " ilość " + amount +
-//                        " cena " + priceList.get("frezja") +
+                        " ilość " + getAmount() +
+                        " cena " + pl.getPrice("róża") +
                         "\n";
     }
 }
